@@ -1,0 +1,325 @@
+/* ===========================
+   Google Font
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===========================
+   Body
+=========================== */
+
+body{
+
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #172554,
+        #1e1b4b,
+        #312e81
+    );
+
+    background-size:400% 400%;
+
+    animation:gradient 18s ease infinite;
+
+    overflow-x:hidden;
+
+    color:white;
+}
+
+/* ===========================
+   Gradient Animation
+=========================== */
+
+@keyframes gradient{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#3b82f6;
+
+border-radius:20px;
+
+}
+
+/* ===========================
+   Glass Cards
+=========================== */
+
+.MuiPaper-root{
+
+background:rgba(255,255,255,.08)!important;
+
+backdrop-filter:blur(18px)!important;
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.35)!important;
+
+transition:.35s;
+
+}
+
+.MuiPaper-root:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.45)!important;
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.MuiButton-contained{
+
+background:
+
+linear-gradient(
+90deg,
+#2563eb,
+#7c3aed
+)!important;
+
+transition:.4s!important;
+
+}
+
+.MuiButton-contained:hover{
+
+transform:scale(1.03);
+
+box-shadow:
+
+0 0 30px rgba(124,58,237,.6);
+
+}
+
+/* ===========================
+   TextField
+=========================== */
+
+.MuiOutlinedInput-root{
+
+border-radius:16px!important;
+
+}
+
+.MuiOutlinedInput-input{
+
+color:white!important;
+
+}
+
+.MuiOutlinedInput-input::placeholder{
+
+color:#d1d5db!important;
+
+opacity:1;
+
+}
+
+.MuiOutlinedInput-notchedOutline{
+
+border-color:#64748b!important;
+
+}
+
+/* ===========================
+   Chip
+=========================== */
+
+.MuiChip-root{
+
+font-weight:600;
+
+}
+
+/* ===========================
+   Progress Bar
+=========================== */
+
+.MuiLinearProgress-root{
+
+height:12px!important;
+
+border-radius:10px!important;
+
+}
+
+/* ===========================
+   Floating Circles
+=========================== */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:350px;
+
+height:350px;
+
+background:#2563eb;
+
+border-radius:50%;
+
+filter:blur(180px);
+
+top:-120px;
+
+left:-100px;
+
+opacity:.35;
+
+animation:float1 12s infinite alternate;
+
+z-index:-1;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:350px;
+
+height:350px;
+
+background:#7c3aed;
+
+border-radius:50%;
+
+filter:blur(180px);
+
+bottom:-120px;
+
+right:-100px;
+
+opacity:.35;
+
+animation:float2 12s infinite alternate;
+
+z-index:-1;
+
+}
+
+@keyframes float1{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(100px);
+
+}
+
+}
+
+@keyframes float2{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-100px);
+
+}
+
+}
+
+/* ===========================
+   Fade Animation
+=========================== */
+
+.fade{
+
+animation:fade .8s ease;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+body{
+
+padding:10px;
+
+}
+
+}
